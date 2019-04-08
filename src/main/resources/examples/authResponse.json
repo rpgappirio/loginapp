@@ -1,0 +1,18 @@
+{
+    "_v": "18.8",
+    "_type": "customer",
+    "auth_type": "registered",
+    "creation_date": "2019-01-22T15:32:21.000Z",
+    "customer_id": "bcM03fyhN5tDEaRZl2HkqBLL2c",
+    "customer_no": "00005502",
+    "email": "maria@abc.com",
+    "enabled": true,
+    "first_name": "Maria",
+    "last_login_time": "2019-04-08T19:12:07.049Z",
+    "last_modified": "2019-04-08T19:12:07.050Z",
+    "last_name": "Santos",
+    "last_visit_time": "2019-04-08T19:12:07.049Z",
+    "login": "maria@abc.com",
+    "previous_login_time": "2019-04-08T17:52:23.457Z",
+    "previous_visit_time": "2019-04-08T17:52:23.457Z"
+}

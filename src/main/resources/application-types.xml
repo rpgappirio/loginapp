@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<types:mule xmlns:types="http://www.mulesoft.org/schema/mule/types">
+  <types:catalog>
+    <types:type name="authResponse" format="json">
+      <types:shape format="weave" example="examples/authResponse-1.json"><![CDATA[%dw 2.0
+type authResponse = {|
+  "_v": String, 
+  "_type": String, 
+  auth_type: String, 
+  creation_date: String, 
+  customer_id: String, 
+  customer_no: String, 
+  email: String, 
+  enabled: Boolean, 
+  first_name: String, 
+  last_login_time: String, 
+  last_modified: String, 
+  last_name: String, 
+  last_visit_time: String, 
+  login: String, 
+  previous_login_time: String, 
+  previous_visit_time: String
+|} {"MetadataFormat": "json",
+"example": "{\"_v\":\"18.8\",\"_type\":\"customer\",\"auth_type\":\"registered\",\"creation_date\":\"2019-01-22T15:32:21.000Z\",\"customer_id\":\"bcM03fyhN5tDEaRZl2HkqBLL2c\",\"customer_no\":\"00005502\",\"email\":\"maria@abc.com\",\"enabled\":true,\"first_name\":\"Maria\",\"last_login_time\":\"2019-04-08T19:12:07.049Z\",\"last_modified\":\"2019-04-08T19:12:07.050Z\",\"last_name\":\"Santos\",\"last_visit_time\":\"2019-04-08T19:12:07.049Z\",\"login\":\"maria@abc.com\",\"previous_login_time\":\"2019-04-08T17:52:23.457Z\",\"previous_visit_time\":\"2019-04-08T17:52:23.457Z\"}"}
+
+]]></types:shape>
+    </types:type>
+  </types:catalog>
+  <types:enrichment select="#b5401f95-e705-408c-b262-a35e81d4fca4">
+    <types:processor-declaration>
+      <types:output-event>
+        <types:message>
+          <types:payload type="authResponse"/>
+        </types:message>
+      </types:output-event>
+    </types:processor-declaration>
+  </types:enrichment>
+</types:mule>
